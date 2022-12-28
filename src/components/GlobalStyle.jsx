@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Mulish', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
-    padding: 1.5rem;
+    padding: 1.5rem 0rem;
     color: #333;
   }
   p {
