@@ -1,5 +1,6 @@
 const initState = {
   game: {},
+  screen: {},
 };
 
 const detailReducer = (state = initState, action) => {
@@ -8,6 +9,7 @@ const detailReducer = (state = initState, action) => {
       return {
         ...state,
         game: action.payload.game,
+        screen: action.payload.screen,
       };
     default:
       return { ...state };
