@@ -1,7 +1,7 @@
 // Base URL
-const base_url = `https://api.rawg.io/api/games?key=${
-  import.meta.env.VITE_REACT_APP_API_KEY
-}`;
+const base_url = `https://api.rawg.io/api/games`;
+
+const api_key = `?key=${import.meta.env.VITE_REACT_APP_API_KEY}`;
 
 // Get current date
 const getCurrentMonth = () => {
@@ -38,7 +38,7 @@ const upcoming_games = `&dates=${lastYear},${nextYear}&ordering=-added&page_size
 // New Games
 const new_games = `&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
-export const popularGamesURL = () => `${base_url}${popular_games}`;
-export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
-export const newGamesURL = () => `${base_url}${new_games}`;
-export const gameDetailsURL = (game_id) => `${base_url}/${game_id}`;
+export const popularGamesURL = () => `${base_url}${api_key}${popular_games}`;
+export const upcomingGamesURL = () => `${base_url}${api_key}${upcoming_games}`;
+export const newGamesURL = () => `${base_url}${api_key}${new_games}`;
+export const gameDetailsURL = (game_id) => `${base_url}/${game_id}${api_key}`;
