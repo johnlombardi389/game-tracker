@@ -1,3 +1,6 @@
+//Redux
+import { useDispatch } from "react-redux";
+import { loadDetail } from "../actions/detailAction";
 // Style
 import styled from "styled-components";
 import { motion } from "framer-motion";
