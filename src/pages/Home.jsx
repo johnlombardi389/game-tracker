@@ -24,7 +24,8 @@ function Home() {
 
   return (
     <GameList>
-      {pathId && <GameDetail />}
+      {pathId && <GameDetail pathId={pathId} />}
+
       <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (

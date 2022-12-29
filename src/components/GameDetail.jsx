@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { smallImage } from "../util";
 
-function GameDetail() {
+function GameDetail({ pathId }) {
   // Exit detail
   const navigate = useNavigate();
   const exitDetailHandler = (e) => {

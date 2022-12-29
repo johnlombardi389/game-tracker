@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
+    overflow-y: scroll;
     &::-webkit-scrollbar {
       width: 0.5rem;
     }
