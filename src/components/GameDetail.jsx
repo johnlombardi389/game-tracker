@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 // Style
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { smallImage } from "../util";
 
 function GameDetail() {
   // Exit detail
@@ -39,14 +40,21 @@ function GameDetail() {
               </Info>
             </Stats>
             <Media>
-              <img src={game.background_image} alt={game.name} />
+              <img
+                src={smallImage(game.background_image, 1280)}
+                alt={game.name}
+              />
             </Media>
             <Description>
               <p>{game.description_raw}</p>
             </Description>
             <div className="gallery">
               {screen.results.map((screen) => (
-                <img src={screen.image} alt={screen.image} key={screen.id} />
+                <img
+                  src={smallImage(screen.image, 1280)}
+                  alt={screen.image}
+                  key={screen.id}
+                />
               ))}
             </div>
           </DetailCard>

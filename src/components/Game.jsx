@@ -5,6 +5,7 @@ import { loadDetail } from "../actions/detailAction";
 // Style
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { smallImage } from "../util";
 
 function Game({ name, released, image, id }) {
   // Load game details
@@ -19,7 +20,7 @@ function Game({ name, released, image, id }) {
       <Link to={`/game/${id}`}>
         <h3>{name}</h3>
         <p>{released}</p>
-        <img src={image} alt={name} />
+        <img src={smallImage(image, 640)} alt={name} />
       </Link>
     </StyledGame>
   );
