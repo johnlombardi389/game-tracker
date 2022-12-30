@@ -20,9 +20,13 @@ function Nav() {
     setTextInput(""); // Set input back to nothing after submit
   };
 
+  const clearSearched = () => {
+    dispatch({ type: "CLEAR_SEARCHED" });
+  };
+
   return (
     <StyledNav>
-      <Logo>
+      <Logo onClick={clearSearched}>
         <h1>Hello Nav</h1>
       </Logo>
       <form className="search">
