@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { smallImage } from "../util";
-import { fadeIn, popIn } from "../animations";
+import { fadeIn, popIn, slideIn } from "../animations";
 // Images
 import playstation from "../assets/images/playstation.svg";
 import nintendo from "../assets/images/nintendo.svg";
@@ -70,25 +70,20 @@ function GameDetail({ pathId }) {
     <>
       {!isLoading && (
         <CardShadow className="shadow" onClick={exitDetailHandler}>
-          <DetailCard variants={popIn} initial="hidden" animate="show">
+          <DetailCard variants={slideIn} initial="hidden" animate="show">
             <Stats>
               <div className="rating">
                 <h3>{game.name}</h3>
-                <p>Rating: {game.rating}</p>
-                {getStars()}
               </div>
-              <Info>
-                <h3>Platforms</h3>
-                <Platforms>
-                  {game.platforms.map((data) => (
-                    <img
-                      key={data.platform.id}
-                      src={getPlatform(data.platform.name)}
-                      alt={data.platform.name}
-                    />
-                  ))}
-                </Platforms>
-              </Info>
+              <Platforms>
+                {game.platforms.map((data) => (
+                  <img
+                    key={data.platform.id}
+                    src={getPlatform(data.platform.name)}
+                    alt={data.platform.name}
+                  />
+                ))}
+              </Platforms>
             </Stats>
             <Media>
               <img
@@ -96,6 +91,10 @@ function GameDetail({ pathId }) {
                 alt={game.name}
               />
             </Media>
+            <Stars>
+              <p>Rating: {game.rating}</p>
+              {getStars()}
+            </Stars>
             <Description>
               <p>{game.description_raw}</p>
             </Description>
@@ -137,7 +136,7 @@ const CardShadow = styled(motion.div)`
 
 const DetailCard = styled(motion.div)`
   width: 80%;
-  margin-top: 7rem;
+  margin: 7rem;
   border-radius: 1rem;
   padding: 2rem 5rem;
   background: white;
@@ -148,12 +147,16 @@ const DetailCard = styled(motion.div)`
   img {
     width: 100%;
   }
+  h3 {
+    font-size: 3rem;
+  }
 `;
 
 const Stats = styled(motion.div)`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   img {
     width: 2rem;
     height: 2rem;
@@ -161,15 +164,27 @@ const Stats = styled(motion.div)`
   }
 `;
 
-const Info = styled(motion.div)`
-  text-align: center;
-`;
-
 const Platforms = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
   img {
-    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+`;
+
+const Stars = styled(motion.div)`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 3rem 0rem;
+  p {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+  img {
+    width: 2rem;
+    height: 2rem;
+    display: inline;
   }
 `;
 
