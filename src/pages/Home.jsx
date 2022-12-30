@@ -28,17 +28,23 @@ function Home() {
     <GameList>
       {pathId && <GameDetail pathId={pathId} />}
 
-      <Games>
-        {searched.map((game) => (
-          <Game
-            name={game.name}
-            released={game.released}
-            id={game.id}
-            image={game.background_image}
-            key={game.id}
-          />
-        ))}
-      </Games>
+      {searched.length ? (
+        <div className="searched">
+          <Games>
+            {searched.map((game) => (
+              <Game
+                name={game.name}
+                released={game.released}
+                id={game.id}
+                image={game.background_image}
+                key={game.id}
+              />
+            ))}
+          </Games>
+        </div>
+      ) : (
+        ""
+      )}
 
       <h2>Upcoming Games</h2>
       <Games>
