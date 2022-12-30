@@ -48,6 +48,10 @@ const GlobalStyles = createGlobalStyle`
   img {
     display: block;
   }
+  input {
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+  }
 `;
 
 export default GlobalStyles;

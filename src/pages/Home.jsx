@@ -20,11 +20,25 @@ function Home() {
     dispatch(loadGames());
   }, [dispatch]);
 
-  const { popular, upcoming, newGames } = useSelector((state) => state.games);
+  const { popular, upcoming, newGames, searched } = useSelector(
+    (state) => state.games
+  );
 
   return (
     <GameList>
       {pathId && <GameDetail pathId={pathId} />}
+
+      <Games>
+        {searched.map((game) => (
+          <Game
+            name={game.name}
+            released={game.released}
+            id={game.id}
+            image={game.background_image}
+            key={game.id}
+          />
+        ))}
+      </Games>
 
       <h2>Upcoming Games</h2>
       <Games>
