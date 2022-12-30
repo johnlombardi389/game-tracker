@@ -8,6 +8,7 @@ import GameDetail from "../components/GameDetail";
 // Style
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { fadeIn } from "../animations";
 
 function Home() {
   // Current location
@@ -25,7 +26,7 @@ function Home() {
   );
 
   return (
-    <GameList>
+    <GameList variants={fadeIn} initial="hidden" animate="show">
       {pathId && <GameDetail pathId={pathId} />}
 
       {searched.length ? (

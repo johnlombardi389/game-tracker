@@ -6,6 +6,7 @@ import { loadDetail } from "../actions/detailAction";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { smallImage } from "../util";
+import { fadeIn, popIn } from "../animations";
 
 function Game({ name, released, image, id }) {
   // Load game details
@@ -16,7 +17,12 @@ function Game({ name, released, image, id }) {
   };
 
   return (
-    <StyledGame onClick={loadDetailHandler}>
+    <StyledGame
+      variants={popIn}
+      initial="hidden"
+      animate="show"
+      onClick={loadDetailHandler}
+    >
       <Link to={`/game/${id}`}>
         <h3>{name}</h3>
         <p>{released}</p>
