@@ -31,7 +31,7 @@ function Game({ name, released, image, rating, id }) {
           <p>Release Date: {released}</p>
           <Star>
             <GiRoundStar />
-            <p>{rating}</p>
+            <p>{Math.round(rating * 10) / 10}</p>
           </Star>
         </Info>
         <img src={smallImage(image, 640)} alt={name} />
