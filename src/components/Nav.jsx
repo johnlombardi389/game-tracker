@@ -43,7 +43,7 @@ function Nav() {
 }
 
 const StyledNav = styled(motion.nav)`
-  padding: 2rem 5rem;
+  padding: 3rem 5rem;
   text-align: center;
   background: linear-gradient(45deg, #6d3aea, #40b1c4);
   input {
@@ -52,7 +52,7 @@ const StyledNav = styled(motion.nav)`
     padding: 0.5rem;
     border: none;
     outline: none;
-    margin-top: 1rem;
+    margin: 1rem 0rem;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   }
   button {
