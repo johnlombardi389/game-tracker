@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 // Redux
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
+// Icons
+import { RiGameFill } from "react-icons/ri";
 
 function Nav() {
   const dispatch = useDispatch();
@@ -27,6 +29,7 @@ function Nav() {
   return (
     <StyledNav>
       <Logo onClick={clearSearched}>
+        <RiGameFill />
         <h1>Hello Nav</h1>
       </Logo>
       <form className="search">
@@ -62,8 +65,15 @@ const StyledNav = styled(motion.nav)`
 const Logo = styled(motion.div)`
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   cursor: pointer;
+  svg {
+    width: 5rem;
+    height: 5rem;
+    padding-right: 1rem;
+    color: #0f423b;
+  }
   h1 {
     font-family: "Play", sans-serif;
     font-weight: 700;
