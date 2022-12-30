@@ -12,6 +12,8 @@ import xbox from "../assets/images/xbox.svg";
 import steam from "../assets/images/steam.svg";
 import apple from "../assets/images/apple.svg";
 import gamepad from "../assets/images/gamepad.svg";
+import starEmpty from "../assets/images/star-empty.png";
+import starFull from "../assets/images/star-full.png";
 
 function GameDetail({ pathId }) {
   // Exit detail
@@ -46,6 +48,20 @@ function GameDetail({ pathId }) {
     }
   };
 
+  // Get star rating
+  const getStars = () => {
+    const stars = [];
+    const rating = Math.floor(game.rating);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(<img src={starFull} alt="star" key={i} />);
+      } else {
+        stars.push(<img src={starEmpty} alt="star" key={i} />);
+      }
+    }
+    return stars;
+  };
+
   // Data
   const { game, screen, isLoading } = useSelector((state) => state.detail);
 
@@ -58,6 +74,7 @@ function GameDetail({ pathId }) {
               <div className="rating">
                 <h3>{game.name}</h3>
                 <p>Rating: {game.rating}</p>
+                {getStars()}
               </div>
               <Info>
                 <h3>Platforms</h3>
@@ -135,6 +152,11 @@ const Stats = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  img {
+    width: 2rem;
+    height: 2rem;
+    display: inline;
+  }
 `;
 
 const Info = styled(motion.div)`
