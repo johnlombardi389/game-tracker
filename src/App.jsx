@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 // Component
 import Nav from "./components/Nav";
-import GameDetail from "./components/GameDetail";
+import Footer from "./components/Footer";
 // Style
 import GlobalStyles from "./components/GlobalStyle";
 
@@ -17,6 +17,7 @@ function App() {
         <Route path={"/"} element={<Home />} />
         <Route path={"/game/:id"} element={<Home />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
