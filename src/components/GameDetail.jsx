@@ -139,7 +139,7 @@ const DetailCard = styled(motion.div)`
   margin: 7rem;
   border-radius: 1rem;
   padding: 2rem 5rem;
-  background: white;
+  background-color: white;
   position: absolute;
   left: 10%;
   color: black;

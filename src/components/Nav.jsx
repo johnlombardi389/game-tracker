@@ -45,6 +45,7 @@ function Nav() {
 const StyledNav = styled(motion.nav)`
   padding: 2rem 5rem;
   text-align: center;
+  background-color: #4abcad;
   input {
     width: 30%;
     font-size: 1.5rem;
@@ -53,12 +54,14 @@ const StyledNav = styled(motion.nav)`
     outline: none;
     margin-top: 1rem;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    background-color: #e0dce4;
   }
   button {
     font-size: 1.5rem;
     border: none;
     padding: 0.5rem;
     cursor: pointer;
+    background-color: #fbb438;
   }
 `;
 
@@ -72,7 +75,7 @@ const Logo = styled(motion.div)`
     width: 5rem;
     height: 5rem;
     padding-right: 1rem;
-    color: #0f423b;
+    color: #ff491b;
   }
   h1 {
     font-family: "Play", sans-serif;
