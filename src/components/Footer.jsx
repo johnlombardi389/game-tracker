@@ -6,15 +6,27 @@ import {
   FaYoutube,
   FaInstagram,
   FaTwitterSquare,
-  FaTiktok,
+  FaDiscord,
 } from "react-icons/fa";
+import { RiGameFill } from "react-icons/ri";
 
 function Footer() {
   return (
     <StyledFooter>
       <Row>
         <div>
-          <h5>Recipes</h5>
+          <h5>Games</h5>
+          <List>
+            <li>Explore Tags</li>
+            <li>Popular</li>
+            <li>Upcoming</li>
+            <li>New Games</li>
+            <li>Publishers</li>
+          </List>
+        </div>
+
+        <div>
+          <h5>Tutorials</h5>
           <List>
             <li>About Us</li>
             <li>Meet the team</li>
@@ -25,30 +37,20 @@ function Footer() {
         </div>
 
         <div>
-          <h5>Services</h5>
+          <h5>Reviews</h5>
           <List>
-            <li>About Us</li>
-            <li>Meet the team</li>
-            <li>Events</li>
-            <li>Careers</li>
-            <li>Contact Us</li>
-          </List>
-        </div>
-
-        <div>
-          <h5>Discover</h5>
-          <List>
-            <li>About Us</li>
-            <li>Meet the team</li>
-            <li>Events</li>
-            <li>Careers</li>
-            <li>Contact Us</li>
+            <li>PC</li>
+            <li>PlayStation</li>
+            <li>Xbox</li>
+            <li>Nintendo</li>
+            <li>Mobile</li>
           </List>
         </div>
 
         <div>
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <Logo>
+              <RiGameFill />
               <p>Company Name</p>
             </Logo>
           </NavLink>
@@ -63,7 +65,7 @@ function Footer() {
               <FaTwitterSquare />
             </li>
             <li>
-              <FaTiktok />
+              <FaDiscord />
             </li>
           </Socials>
         </div>
@@ -73,6 +75,7 @@ function Footer() {
 }
 
 const StyledFooter = styled.footer`
+  margin-top: 7rem;
   background: #fbbb62;
   padding: 2% 20%;
 `;
