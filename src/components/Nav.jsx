@@ -57,11 +57,12 @@ const StyledNav = styled(motion.nav)`
   }
   button {
     font-size: 1.5rem;
-    border: none;
+    border: 1px solid #393146;
     padding: 0.5rem;
     cursor: pointer;
     background-color: #393146;
     color: white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   }
 `;
 

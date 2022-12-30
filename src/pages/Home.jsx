@@ -21,7 +21,7 @@ function Home() {
     dispatch(loadGames());
   }, [dispatch]);
 
-  const { popular, upcoming, newGames, searched } = useSelector(
+  const { popular, upcoming, searched, name } = useSelector(
     (state) => state.games
   );
 
@@ -31,6 +31,9 @@ function Home() {
 
       {searched.length ? (
         <div className="searched">
+          <h2>
+            {searched.length} results for "{name}"
+          </h2>
           <Games>
             {searched.map((game) => (
               <Game
