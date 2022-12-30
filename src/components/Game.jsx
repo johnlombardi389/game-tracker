@@ -75,6 +75,7 @@ const Star = styled(motion.div)`
     z-index: 2;
     color: pink;
     font-size: 0.75rem;
+    transform: translateY(5%);
   }
 `;
 
