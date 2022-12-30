@@ -30,7 +30,7 @@ function Nav() {
     <StyledNav>
       <Logo onClick={clearSearched}>
         <RiGameFill />
-        <h1>Hello Nav</h1>
+        <h1>Games</h1>
       </Logo>
       <form className="search">
         <input value={textInput} onChange={inputHandler} type="text" />
@@ -45,7 +45,7 @@ function Nav() {
 const StyledNav = styled(motion.nav)`
   padding: 2rem 5rem;
   text-align: center;
-  background-color: #4abcad;
+  background: linear-gradient(45deg, #6d3aea, #40b1c4);
   input {
     width: 30%;
     font-size: 1.5rem;
@@ -54,14 +54,14 @@ const StyledNav = styled(motion.nav)`
     outline: none;
     margin-top: 1rem;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-    background-color: #e0dce4;
   }
   button {
     font-size: 1.5rem;
     border: none;
     padding: 0.5rem;
     cursor: pointer;
-    background-color: #fbb438;
+    background-color: #393146;
+    color: white;
   }
 `;
 
@@ -75,12 +75,13 @@ const Logo = styled(motion.div)`
     width: 5rem;
     height: 5rem;
     padding-right: 1rem;
-    color: #ff491b;
+    color: #40d334;
   }
   h1 {
     font-family: "Play", sans-serif;
     font-weight: 700;
     font-size: 3rem;
+    color: white;
   }
 `;
 

@@ -51,7 +51,7 @@ function Footer() {
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <Logo>
               <RiGameFill />
-              <p>Company Name</p>
+              <h1>Games</h1>
             </Logo>
           </NavLink>
           <Socials>
@@ -76,7 +76,7 @@ function Footer() {
 
 const StyledFooter = styled.footer`
   margin-top: 7rem;
-  background: #fbbb62;
+  background: linear-gradient(45deg, #40b1c4, #6d3aea);
   padding: 2% 20%;
 `;
 
@@ -113,13 +113,13 @@ const Logo = styled.div`
     width: 5rem;
     height: 5rem;
     padding-right: 1rem;
-    color: #0f423b;
+    color: #40d334;
   }
-  p {
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    color: black;
+  h1 {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: white;
   }
 `;
 
@@ -130,7 +130,7 @@ const Socials = styled.ul`
   align-items: center;
   cursor: pointer;
   svg {
-    color: #0f423b;
+    color: white;
     width: 2rem;
     height: 2rem;
   }
