@@ -30,10 +30,10 @@ const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
 const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 // Popular Games
-const popular_games = `&dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
+const popular_games = `&dates=${lastYear},${nextYear}&ordering=-added&page_size=10`;
 
 // Upcoming Games
-const upcoming_games = `&dates=${lastYear},${nextYear}&ordering=-added&page_size=10`;
+const upcoming_games = `&dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
 
 // New Games
 const new_games = `&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
