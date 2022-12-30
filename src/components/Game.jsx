@@ -6,7 +6,7 @@ import { loadDetail } from "../actions/detailAction";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { smallImage } from "../util";
-import { fadeIn, popIn } from "../animations";
+import { popIn } from "../animations";
 
 function Game({ name, released, image, id }) {
   // Load game details

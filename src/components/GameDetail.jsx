@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { smallImage } from "../util";
+import { fadeIn, popIn } from "../animations";
 // Images
 import playstation from "../assets/images/playstation.svg";
 import nintendo from "../assets/images/nintendo.svg";
@@ -69,7 +70,7 @@ function GameDetail({ pathId }) {
     <>
       {!isLoading && (
         <CardShadow className="shadow" onClick={exitDetailHandler}>
-          <DetailCard>
+          <DetailCard variants={popIn} initial="hidden" animate="show">
             <Stats>
               <div className="rating">
                 <h3>{game.name}</h3>
