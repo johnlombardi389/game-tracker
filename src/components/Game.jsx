@@ -21,11 +21,11 @@ function Game({ name, released, image, rating, id }) {
   const ratingColor = (rating) => {
     let color = "";
     if (rating >= 4) {
-      color = "green";
+      color = "#40d334";
     } else if (rating <= 2) {
-      color = "red";
+      color = "#C31B18";
     } else {
-      color = "yellow";
+      color = "#FBE104";
     }
     return color;
   };
@@ -85,9 +85,11 @@ const Star = styled(motion.div)`
   p {
     position: absolute;
     z-index: 2;
-    color: pink;
+    color: black;
     font-size: 0.75rem;
     transform: translateY(5%);
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
   }
 `;
 
