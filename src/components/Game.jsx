@@ -18,6 +18,18 @@ function Game({ name, released, image, rating, id }) {
     dispatch(loadDetail(id));
   };
 
+  const ratingColor = (rating) => {
+    let color = "";
+    if (rating >= 4) {
+      color = "green";
+    } else if (rating <= 2) {
+      color = "red";
+    } else {
+      color = "yellow";
+    }
+    return color;
+  };
+
   return (
     <StyledGame
       variants={popIn}
@@ -30,7 +42,7 @@ function Game({ name, released, image, rating, id }) {
         <Info>
           <p>Release Date: {released}</p>
           <Star>
-            <GiRoundStar />
+            <GiRoundStar style={{ color: ratingColor(rating) }} />
             <p>{Math.round(rating * 10) / 10}</p>
           </Star>
         </Info>
