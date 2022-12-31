@@ -100,6 +100,7 @@ const Star = styled(motion.div)`
     transform: translateY(5%);
     font-family: "Mulish", sans-serif;
     font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
 `;
 
