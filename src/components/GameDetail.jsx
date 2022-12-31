@@ -96,13 +96,58 @@ function GameDetail({ pathId }) {
                 alt={game.name}
               />
             </Media>
-            <Stars>
+
+            <InfoBar>
+              <div className="developers">
+                <p>Developers:</p>
+                <ul>
+                  {game.developers.map((data) => (
+                    <li key={data.id}>{data.name}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="publisher">
+                <p>Publishers:</p>
+                <ul>
+                  {game.publishers.map((data) => (
+                    <li key={data.id}>{data.name}</li>
+                  ))}
+                </ul>
+              </div>
+              {/* <div className="website-link">
+                <p>Website:</p>
+                <a href={game.website} target="_blank">
+                  {game.name}
+                </a>
+              </div> */}
+            </InfoBar>
+            {/* <Stars>
               <p>Rating: {game.rating}</p>
               {getStars()}
-            </Stars>
+            </Stars> */}
+
             <Description>
+              <h4>Description</h4>
               <p>{game.description_raw}</p>
             </Description>
+
+            <div className="genre-list">
+              <h4>Genres</h4>
+              <ul>
+                {game.genres.map((genre) => (
+                  <li key={genre.id}>{genre.name}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="other-websites">
+              <a href={game.metacritic_url} target="_blank">
+                See the Metacritic Scores
+              </a>
+              <a href={game.reddit_url} target="_blank">
+                Join the Reddit community
+              </a>
+            </div>
             <div className="gallery">
               {screen.results.map((screen) => (
                 <img
@@ -172,6 +217,7 @@ const Stats = styled(motion.div)`
 const Platforms = styled(motion.div)`
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     li {
       display: flex;
@@ -213,6 +259,26 @@ const Media = styled(motion.div)`
   margin-top: 5rem;
   img {
     width: 100%;
+  }
+`;
+
+const InfoBar = styled(motion.div)`
+  background: linear-gradient(
+    45deg,
+    rgba(109, 58, 234, 0.75),
+    rgba(64, 177, 196, 0.75)
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      padding-right: 1.3rem;
+    }
   }
 `;
 

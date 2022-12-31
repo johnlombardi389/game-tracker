@@ -73,7 +73,6 @@ const Logo = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   cursor: pointer;
   svg {
     width: 5rem;
@@ -81,15 +80,17 @@ const Logo = styled(motion.div)`
     padding-right: 1rem;
     color: #40d334;
     transition: transform 0.5s;
-    &:hover {
-      transform: translateX(20px);
-    }
   }
   h1 {
     font-family: "Play", sans-serif;
     font-weight: 700;
     font-size: 3rem;
     color: white;
+  }
+  &:hover {
+    svg {
+      transform: translateX(20px);
+    }
   }
 `;
 

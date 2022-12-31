@@ -125,7 +125,9 @@ const Logo = styled.div`
     padding-right: 1rem;
     color: #40d334;
     transition: transform 0.5s;
-    &:hover {
+  }
+  &:hover {
+    svg {
       transform: translateX(20px);
     }
   }
