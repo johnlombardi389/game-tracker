@@ -177,7 +177,15 @@ const Platforms = styled(motion.div)`
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding-right: 3rem;
+      margin-right: 3rem;
+      padding: 0.25rem 0rem;
+      background: transparent;
+      border-radius: 0.25rem;
+      border: 1px solid #393146;
+      p {
+        padding-left: 1rem;
+        color: black;
+      }
     }
   }
   img {
