@@ -120,6 +120,10 @@ const Logo = styled.div`
     height: 5rem;
     padding-right: 1rem;
     color: #40d334;
+    transition: transform 0.5s;
+    &:hover {
+      transform: translateX(20px);
+    }
   }
   h1 {
     font-family: "Play", sans-serif;
