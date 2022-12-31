@@ -178,7 +178,7 @@ const Platforms = styled(motion.div)`
       justify-content: space-around;
       align-items: center;
       margin-right: 3rem;
-      padding: 0.25rem 0rem;
+      padding: 0.5rem 0rem;
       background: transparent;
       border-radius: 0.25rem;
       border: 1px solid #393146;
