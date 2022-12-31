@@ -30,7 +30,7 @@ function Nav() {
     <StyledNav>
       <Logo onClick={clearSearched}>
         <RiGameFill />
-        <h1>Games</h1>
+        <h1>Game Pac</h1>
       </Logo>
       <form className="search">
         <input value={textInput} onChange={inputHandler} type="text" />

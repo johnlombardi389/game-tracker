@@ -51,7 +51,7 @@ function Footer() {
           <NavLink to="/" style={{ textDecoration: "none" }}>
             <Logo>
               <RiGameFill />
-              <h1>Games</h1>
+              <h1>Game Pac</h1>
             </Logo>
           </NavLink>
           <Socials>
@@ -109,7 +109,7 @@ const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3rem;
+  padding: 1rem 1rem;
   svg {
     width: 5rem;
     height: 5rem;
@@ -121,6 +121,7 @@ const Logo = styled.div`
     font-weight: 700;
     font-size: 2.5rem;
     color: white;
+    padding-right: 1rem;
   }
 `;
 
