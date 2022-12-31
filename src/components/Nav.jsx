@@ -45,7 +45,11 @@ function Nav() {
 const StyledNav = styled(motion.nav)`
   padding: 3rem 5rem;
   text-align: center;
-  background: linear-gradient(45deg, #6d3aea, #40b1c4);
+  background: linear-gradient(
+    45deg,
+    rgba(109, 58, 234, 0.75),
+    rgba(64, 177, 196, 0.75)
+  );
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   input {
     width: 30%;

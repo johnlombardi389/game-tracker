@@ -76,7 +76,11 @@ function Footer() {
 
 const StyledFooter = styled.footer`
   margin-top: 7rem;
-  background: linear-gradient(45deg, #40b1c4, #6d3aea);
+  background: linear-gradient(
+    45deg,
+    rgba(64, 177, 196, 0.75),
+    rgba(109, 58, 234, 0.75)
+  );
   padding: 2% 20%;
   box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3);
 `;
