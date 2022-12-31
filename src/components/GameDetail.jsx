@@ -72,17 +72,22 @@ function GameDetail({ pathId }) {
         <CardShadow className="shadow" onClick={exitDetailHandler}>
           <DetailCard variants={slideIn} initial="hidden" animate="show">
             <Stats>
-              <div className="rating">
+              <div className="title">
                 <h3>{game.name}</h3>
               </div>
               <Platforms>
-                {game.platforms.map((data) => (
-                  <img
-                    key={data.platform.id}
-                    src={getPlatform(data.platform.name)}
-                    alt={data.platform.name}
-                  />
-                ))}
+                <ul>
+                  {game.platforms.map((data) => (
+                    <li key={data.platform.id}>
+                      <p>{data.platform.name}</p>
+                      <img
+                        key={data.platform.id}
+                        src={getPlatform(data.platform.name)}
+                        alt={data.platform.name}
+                      />
+                    </li>
+                  ))}
+                </ul>
               </Platforms>
             </Stats>
             <Media>
@@ -165,10 +170,18 @@ const Stats = styled(motion.div)`
 `;
 
 const Platforms = styled(motion.div)`
-  display: flex;
-  justify-content: space-evenly;
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-right: 3rem;
+    }
+  }
   img {
-    margin-right: 3rem;
+    margin: 0rem 1rem;
   }
 `;
 
