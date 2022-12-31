@@ -55,14 +55,17 @@ function Game({ name, released, image, rating, id }) {
 const StyledGame = styled(motion.div)`
   min-height: 30vh;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  text-align: left;
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
   background-color: white;
+  h3 {
+    padding: 1rem 0 0 2rem;
+  }
   img {
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     object-fit: cover;
   }
 `;
@@ -71,7 +74,12 @@ const Info = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 3rem;
+  padding: 1rem 2rem;
+  p {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
 `;
 
 const Star = styled(motion.div)`
