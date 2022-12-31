@@ -140,6 +140,10 @@ const Socials = styled.ul`
     color: white;
     width: 2rem;
     height: 2rem;
+    transition: all 0.2s;
+    &:hover {
+      color: #393146;
+    }
   }
 `;
 
