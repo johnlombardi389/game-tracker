@@ -103,6 +103,10 @@ const List = styled.ul`
     font-size: 1rem;
     line-height: 2.5rem;
     color: #393146;
+    transition: all 0.2s;
+    &:hover {
+      color: white;
+    }
   }
 `;
 
