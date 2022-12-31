@@ -46,6 +46,7 @@ const StyledNav = styled(motion.nav)`
   padding: 3rem 5rem;
   text-align: center;
   background: linear-gradient(45deg, #6d3aea, #40b1c4);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   input {
     width: 30%;
     font-size: 1.5rem;

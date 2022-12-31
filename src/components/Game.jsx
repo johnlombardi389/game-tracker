@@ -59,6 +59,7 @@ const StyledGame = styled(motion.div)`
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
+  background-color: white;
   img {
     width: 100%;
     height: 40vh;
