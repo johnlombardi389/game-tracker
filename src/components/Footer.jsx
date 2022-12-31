@@ -26,7 +26,7 @@ function Footer() {
         </div>
 
         <div>
-          <h5>Tutorials</h5>
+          <h5>About</h5>
           <List>
             <li>About Us</li>
             <li>Meet the team</li>
