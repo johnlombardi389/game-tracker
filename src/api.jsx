@@ -45,4 +45,4 @@ export const gameDetailsURL = (game_id) => `${base_url}/${game_id}${api_key}`;
 export const gameScreenshotURL = (game_id) =>
   `${base_url}/${game_id}/screenshots${api_key}`;
 export const searchGameURL = (game_name) =>
-  `${base_url}${api_key}&search=${game_name}&page_size=9`;
+  `${base_url}${api_key}&search=${game_name}&ordering=-rating&page_size=9`;

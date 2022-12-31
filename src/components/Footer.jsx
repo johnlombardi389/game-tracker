@@ -102,6 +102,7 @@ const List = styled.ul`
     font-weight: 400;
     font-size: 1rem;
     line-height: 2.5rem;
+    color: #393146;
   }
 `;
 

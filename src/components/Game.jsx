@@ -62,6 +62,7 @@ const StyledGame = styled(motion.div)`
   background-color: white;
   h3 {
     padding: 1rem 0 0 2rem;
+    color: #393146;
   }
   img {
     width: 100%;
