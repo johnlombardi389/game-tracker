@@ -131,7 +131,7 @@ function GameDetail({ pathId }) {
               <p>{game.description_raw}</p>
               {game.released ? <p>Released: {game.released}</p> : ""}
               <p>
-                Learn more about the game at the official
+                Learn more about the game at by visiting the{" "}
                 <a href={game.website} target="_blank">
                   {game.name} website
                 </a>
@@ -139,14 +139,14 @@ function GameDetail({ pathId }) {
               </p>
             </Description>
 
-            <div className="genre-list">
+            <Genres>
               <h4>Genres</h4>
               <ul>
                 {game.genres.map((genre) => (
                   <li key={genre.id}>{genre.name}</li>
                 ))}
               </ul>
-            </div>
+            </Genres>
 
             <div className="other-websites">
               <a href={game.metacritic_url} target="_blank">
@@ -295,7 +295,7 @@ const InfoBar = styled(motion.div)`
     font-family: "Play", sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
-    color: #333;
+    color: black;
   }
 `;
 
@@ -305,13 +305,50 @@ const Description = styled(motion.div)`
     font-family: "Play", sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
-    color: #333;
+    color: #393146;
     margin-bottom: 1rem;
   }
   p {
     font-family: "Mulish", sans-serif;
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    color: black;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: #40d334;
+    }
+  }
+`;
+
+const Genres = styled(motion.div)`
+  margin: 3rem 0rem;
+  h4 {
+    font-family: "Play", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #393146;
+    margin-bottom: 1rem;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      background: #393146;
+      border-radius: 0.25rem;
+      color: white;
+      font-family: "Mulish", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
   }
 `;
 
