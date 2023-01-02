@@ -129,7 +129,7 @@ function GameDetail({ pathId }) {
             <Description>
               <h4>Description</h4>
               <p>{game.description_raw}</p>
-              <p>Released: {game.released}</p>
+              {game.released ? <p>Released: {game.released}</p> : ""}
               <p>
                 Learn more about the game at the official
                 <a href={game.website} target="_blank">
