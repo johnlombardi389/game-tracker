@@ -279,7 +279,15 @@ const InfoBar = styled(motion.div)`
     align-items: center;
     li {
       padding-right: 1.3rem;
+      font-family: "Mulish", sans-serif;
+      font-size: 1.1rem;
     }
+  }
+  p {
+    font-family: "Play", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
   }
 `;
 
