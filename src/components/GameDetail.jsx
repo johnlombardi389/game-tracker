@@ -129,6 +129,14 @@ function GameDetail({ pathId }) {
             <Description>
               <h4>Description</h4>
               <p>{game.description_raw}</p>
+              <p>Released: {game.released}</p>
+              <p>
+                Learn more about the game at the official
+                <a href={game.website} target="_blank">
+                  {game.name} website
+                </a>
+                .
+              </p>
             </Description>
 
             <div className="genre-list">
@@ -292,7 +300,19 @@ const InfoBar = styled(motion.div)`
 `;
 
 const Description = styled(motion.div)`
-  margin: 5rem 0rem;
+  margin: 3rem 0rem;
+  h4 {
+    font-family: "Play", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export default GameDetail;
