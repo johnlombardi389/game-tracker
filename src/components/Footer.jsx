@@ -11,6 +11,10 @@ import {
 import { RiGameFill } from "react-icons/ri";
 
 function Footer() {
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <StyledFooter>
       <Row>
@@ -48,7 +52,7 @@ function Footer() {
         </div>
 
         <div>
-          <NavLink to="/" style={{ textDecoration: "none" }}>
+          <NavLink to="/" onClick={scrollTop}>
             <Logo>
               <RiGameFill />
               <h1>Game Pac</h1>
