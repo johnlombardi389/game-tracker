@@ -66,6 +66,8 @@ function GameDetail({ pathId }) {
   // Data
   const { game, screen, isLoading } = useSelector((state) => state.detail);
 
+  console.log(game);
+
   return (
     <>
       {!isLoading && (
