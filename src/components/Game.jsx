@@ -66,8 +66,16 @@ const StyledGame = styled(motion.div)`
   }
   img {
     width: 100%;
-    height: 30vh;
+    height: 40vh;
     object-fit: cover;
+  }
+  @media (max-width: 1200px) {
+    h3 {
+      padding: 0.75rem 0 0 1rem;
+    }
+    img {
+      height: 50vh;
+    }
   }
 `;
 
@@ -80,6 +88,9 @@ const Info = styled(motion.div)`
     font-family: "Mulish", sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
+  }
+  @media (max-width: 1200px) {
+    padding: 0.75rem 1rem;
   }
 `;
 
