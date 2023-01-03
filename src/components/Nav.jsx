@@ -43,7 +43,7 @@ function Nav() {
 }
 
 const StyledNav = styled(motion.nav)`
-  padding: 3rem 5rem;
+  padding: 1rem 5rem;
   text-align: center;
   background: linear-gradient(
     45deg,
