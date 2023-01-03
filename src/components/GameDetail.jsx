@@ -188,7 +188,7 @@ const CardShadow = styled(motion.div)`
 
 const DetailCard = styled(motion.div)`
   width: 80%;
-  margin: 7rem;
+  margin: 0 auto;
   border-radius: 1rem;
   padding: 2rem 5rem;
   background-color: white;
@@ -198,9 +198,29 @@ const DetailCard = styled(motion.div)`
   z-index: 10;
   img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
   }
   h3 {
     font-size: 3rem;
+  }
+  @media (max-width: 1500px) {
+    padding: 2rem 4rem;
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    padding: 1.5rem 3rem;
+  }
+  @media (max-width: 700px) {
+    padding: 1rem 1.5rem;
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 500px) {
+    padding: 0.25rem 0.75rem;
   }
 `;
 
@@ -227,7 +247,7 @@ const Platforms = styled(motion.div)`
       align-items: center;
       margin-right: 3rem;
       margin-top: 1rem;
-      padding: 0.5rem 0rem;
+      padding: 0.5rem;
       background: transparent;
       border-radius: 0.25rem;
       border: 1px solid #393146;
@@ -239,6 +259,20 @@ const Platforms = styled(motion.div)`
   }
   img {
     margin: 0rem 1rem;
+  }
+  @media (max-width: 1500px) {
+    ul {
+      li {
+        margin-right: 1.2rem;
+        padding: 0.25rem 0rem;
+        p {
+          padding-left: 0.8rem;
+        }
+      }
+    }
+    img {
+      margin: 0rem 0.5rem;
+    }
   }
 `;
 
@@ -259,7 +293,7 @@ const Stars = styled(motion.div)`
 `;
 
 const Media = styled(motion.div)`
-  margin-top: 5rem;
+  margin-top: 3rem;
   img {
     width: 100%;
   }
@@ -290,6 +324,18 @@ const InfoBar = styled(motion.div)`
     font-size: 0.9rem;
     font-weight: 700;
     color: black;
+  }
+  @media (max-width: 1300px) {
+    padding: 0.5rem 1.5rem;
+    ul {
+      li {
+        padding-right: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+    p {
+      font-size: 0.7rem;
+    }
   }
 `;
 
