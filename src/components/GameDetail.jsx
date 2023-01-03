@@ -148,14 +148,6 @@ function GameDetail({ pathId }) {
               </ul>
             </Genres>
 
-            <div className="other-websites">
-              <a href={game.metacritic_url} target="_blank">
-                See the Metacritic Scores
-              </a>
-              <a href={game.reddit_url} target="_blank">
-                Join the Reddit community
-              </a>
-            </div>
             <div className="gallery">
               {screen.results.map((screen) => (
                 <img
