@@ -83,6 +83,12 @@ const StyledFooter = styled.footer`
   );
   padding: 2% 20%;
   box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3);
+  @media (max-width: 1400px) {
+    padding: 2% 10%;
+  }
+  @media (max-width: 1000px) {
+    padding: 2% 1rem;
+  }
 `;
 
 const Row = styled.div`
@@ -93,6 +99,15 @@ const Row = styled.div`
     font-family: "Play", sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
+  }
+  @media (max-width: 1400px) {
+    h5 {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 600px) {
+    display: block;
+    text-align: center;
   }
 `;
 
@@ -110,6 +125,12 @@ const List = styled.ul`
     transition: all 0.2s;
     &:hover {
       color: white;
+    }
+  }
+  @media (max-width: 1400px) {
+    li {
+      font-size: 0.85rem;
+      line-height: 2rem;
     }
   }
 `;
@@ -153,6 +174,13 @@ const Socials = styled.ul`
     transition: all 0.2s;
     &:hover {
       color: #393146;
+    }
+  }
+  @media (max-width: 750px) {
+    justify-content: space-around;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 `;
