@@ -20,7 +20,7 @@ git checkout -B main
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:johnlombardi389/game-tracker.github.io.git main
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
+git push -f git@github.com:johnlombardi389/game-tracker.git main:gh-pages
 
 cd -
