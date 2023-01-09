@@ -14,6 +14,7 @@ function Home() {
   // Current location
   const location = useLocation();
   const pathId = location.pathname.split("/")[2];
+  console.log(location.pathname);
 
   // Fetch games
   const dispatch = useDispatch();

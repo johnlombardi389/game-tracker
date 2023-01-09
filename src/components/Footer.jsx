@@ -52,7 +52,7 @@ function Footer() {
         </div>
 
         <div>
-          <NavLink to="/" onClick={scrollTop}>
+          <NavLink to="/game-tracker" onClick={scrollTop}>
             <Logo>
               <RiGameFill />
               <h1>Game Pac</h1>

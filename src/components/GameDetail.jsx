@@ -23,7 +23,7 @@ function GameDetail({ pathId }) {
     const element = e.target;
     if (element.classList.contains("shadow")) {
       document.body.style.overflow = "auto";
-      navigate("/");
+      navigate("/game-tracker/");
     }
   };
 
