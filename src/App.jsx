@@ -15,7 +15,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path={"/game-tracker"} element={<Home />} />
-        <Route path={"/game-tracker/game/:id"} element={<Home />} />
+        <Route path={"/game/:id"} element={<Home />} />
       </Routes>
       <Footer />
     </div>
