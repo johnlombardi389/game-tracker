@@ -20,7 +20,8 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     width: 100%;
-    background-color: yellow;
+    background-image: url('../assets/images/subtle-prism.svg');
+    background-repeat: repeat; 
   }
   h2 {
     font-family: 'Play', sans-serif;
