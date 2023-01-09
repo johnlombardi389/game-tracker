@@ -7,6 +7,8 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
+    background-image: url('/src/assets/images/subtle-prism.svg');
+    background-repeat: repeat; 
     overflow-y: scroll;
     &::-webkit-scrollbar {
       width: 0.5rem;
@@ -20,8 +22,6 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     width: 100%;
-    background-image: url('/src/assets/images/subtle-prism.svg');
-    background-repeat: repeat; 
   }
   h2 {
     font-family: 'Play', sans-serif;
