@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     width: 100%;
-    background-image: url('../assets/images/subtle-prism.svg');
+    background-image: url('https://raw.githubusercontent.com/johnlombardi389/game-tracker/eeb311885d2a623dec4233dff1259a463cd0257b/src/assets/images/subtle-prism.svg');
     background-repeat: repeat; 
   }
   h2 {
