@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    background-image: url('../assets/images/subtle-prism.svg');
+    background-image: url('../src/assets/images/subtle-prism.svg');
     background-repeat: repeat; 
     overflow-y: scroll;
     &::-webkit-scrollbar {
