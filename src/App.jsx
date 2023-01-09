@@ -14,7 +14,7 @@ function App() {
       <GlobalStyles />
       <Nav />
       <Routes>
-        <Route path={"/"} element={<Home />} />
+        <Route path={"/game-tracker"} element={<Home />} />
         <Route path={"/game/:id"} element={<Home />} />
       </Routes>
       <Footer />
